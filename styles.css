@@ -19,6 +19,14 @@ td {
     width:90%;
     position: fixed;
     bottom: 0;
+    border: 0;
+}
+
+#prompt {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 0;
 }
 
 #dateSetting {

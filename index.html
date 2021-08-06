@@ -9,17 +9,20 @@
 
   <body>
       <div id="header">
-          <label>Show date</label>
-          <input type="checkbox" id="dateSetting" checked>
+          <label>Show date in log</label>
+          <input type="checkbox" id="dateSetting">
           <hr/>
       </div>
       <div id=main-content>
         <table id="log"></table>
-        <input type="text" id="input" />
+        <p id="prompt">></p>
+        <input type="text" id="input" placeholder="Write log message..."/>
     </div>
   </body>
 
   <script>
+      document.getElementById('input').focus();
+
     function addLeadingZero(number) {
       number = number.toString();
       if (number.length <= 1) {
