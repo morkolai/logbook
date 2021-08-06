@@ -34,7 +34,7 @@ td {
 }
 
 #dateSetting {
-    transform: scale(2);
+    border: 0;
 }
 
 #header {
