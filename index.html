@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>log</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <table id="log"></table>
+    <input type="text" id="input" />
+  </body>
+
+  <script>
+    function addLeadingZero(number) {
+      number = number.toString();
+      if (number.length <= 1) {
+        number = "0" + number;
+      }
+      return number;
+    }
+
+    function getTimestampString() {
+      const today = new Date();
+      const clock =
+        addLeadingZero(today.getHours()) +
+        ":" +
+        addLeadingZero(today.getMinutes()) +
+        ":" +
+        addLeadingZero(today.getSeconds());
+      const date =
+        addLeadingZero(today.getDay()) +
+        "." +
+        addLeadingZero(today.getMonth()) +
+        "." +
+        addLeadingZero(today.getFullYear());
+      return "[" + clock + " " + date + "]";
+    }
+
+    function submitLogEntry() {
+      let row = document.createElement("tr");
+      let timestamp = document.createElement("td");
+      timestamp.appendChild(document.createTextNode(getTimestampString()));
+      let logEntry = document.createElement("tb");
+      logEntry.appendChild(
+        document.createTextNode(document.getElementById("input").value)
+      );
+      row.appendChild(timestamp);
+      row.appendChild(logEntry);
+      document.getElementById("log").appendChild(row);
+      document.getElementById("input").value = "";
+    }
+
+    $(document).bind("keyup", function (e) {
+      if (e.which == 13) {
+        submitLogEntry();
+      }
+    });
+  </script>
+</html>
