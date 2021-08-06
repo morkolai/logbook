@@ -22,6 +22,10 @@ td {
     border: 0;
 }
 
+#input:focus {
+    outline: none;
+}
+
 #prompt {
     position: fixed;
     left: 0;
