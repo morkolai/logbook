@@ -7,6 +7,10 @@
   </head>
 
   <body>
+      <div>
+          <label>Show date</label>
+          <input type="checkbox" id="dateSetting" checked>
+      </div>
     <table id="log"></table>
     <input type="text" id="input" />
   </body>
@@ -20,7 +24,7 @@
       return number;
     }
 
-    function getTimestampString() {
+    function getTimestampString(showDate) {
       const today = new Date();
       const clock =
         addLeadingZero(today.getHours()) +
@@ -34,13 +38,18 @@
         addLeadingZero(today.getMonth()) +
         "." +
         addLeadingZero(today.getFullYear());
-      return "[" + clock + " " + date + "]";
+      
+        if (showDate) {
+            return "[" + date + " " + clock + "]"; 
+        }
+      
+        return "[" + clock + "]"; 
     }
 
     function submitLogEntry() {
       let row = document.createElement("tr");
       let timestamp = document.createElement("td");
-      timestamp.appendChild(document.createTextNode(getTimestampString()));
+      timestamp.appendChild(document.createTextNode(getTimestampString(document.getElementById('dateSetting').checked)));
       let logEntry = document.createElement("tb");
       logEntry.appendChild(
         document.createTextNode(document.getElementById("input").value)
