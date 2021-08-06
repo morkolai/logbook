@@ -2,17 +2,21 @@
 
 <html>
   <head>
-    <title>log</title>
+    <title>Logbook</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
-      <div>
+      <div id="header">
           <label>Show date</label>
           <input type="checkbox" id="dateSetting" checked>
+          <hr/>
       </div>
-    <table id="log"></table>
-    <input type="text" id="input" />
+      <div id=main-content>
+        <table id="log"></table>
+        <input type="text" id="input" />
+    </div>
   </body>
 
   <script>
@@ -58,6 +62,8 @@
       row.appendChild(logEntry);
       document.getElementById("log").appendChild(row);
       document.getElementById("input").value = "";
+
+      window.scrollTo(0,document.body.scrollHeight);
     }
 
     $(document).bind("keyup", function (e) {
