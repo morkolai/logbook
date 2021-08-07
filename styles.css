@@ -1,58 +1,58 @@
 * {
-    background-color: black;
-    color: green;
-    font-size: large;
-    font: 1.3rem Inconsolata, monospace;
-    text-shadow: 0 0 1px greenyellow;
+  background-color: black;
+  color: green;
+  font-size: large;
+  font: 1.3rem Inconsolata, monospace;
+  text-shadow: 0 0 1px greenyellow;
 }
 
 #main-content {
-    margin-left: 2%;
+  margin-left: 2%;
 }
 
 td {
-    padding-bottom: 10px;
-    padding-right: 40px;
-    word-wrap: break-word;
-    vertical-align: top;
+  padding-bottom: 10px;
+  padding-right: 40px;
+  word-wrap: break-word;
+  vertical-align: top;
 }
 
 #input {
-    width:90%;
-    position: fixed;
-    bottom: 0;
-    border: 0;
+  width: 90%;
+  position: fixed;
+  bottom: 0;
+  border: 0;
 }
 
 #input:focus {
-    outline: none;
+  outline: none;
 }
 
 #prompt {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    margin-bottom: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0;
 }
 
 #dateSetting {
-    border: 0;
+  border: 0;
 }
 
 #downloadBtn {
-    border: 0;
-    float: right;
-    padding-right: 1%;
+  border: 0;
+  float: right;
+  padding-right: 1%;
 }
 
 #header {
-    position: fixed;
-    top: 0;
-    width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 #log {
-    margin-top: 3%;
-    margin-bottom: 3%;
-    table-layout: fixed;
+  margin-top: 2.5em;
+  margin-bottom: 3%;
+  table-layout: fixed;
 }
