@@ -13,6 +13,8 @@
 td {
     padding-bottom: 10px;
     padding-right: 40px;
+    word-wrap: break-word;
+    vertical-align: top;
 }
 
 #input {
@@ -52,4 +54,5 @@ td {
 #log {
     margin-top: 3%;
     margin-bottom: 3%;
+    table-layout: fixed;
 }
