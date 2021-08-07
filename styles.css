@@ -37,6 +37,12 @@ td {
     border: 0;
 }
 
+#downloadBtn {
+    border: 0;
+    float: right;
+    padding-right: 1%;
+}
+
 #header {
     position: fixed;
     top: 0;
